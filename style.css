@@ -17,14 +17,19 @@ h3 {
     left: -90px;
 }
 
+
 p {
     color: #596373;
+    display: block;
     font-size: 13px;
     font-weight: bold;
     position: relative;
     top: -40px;
-    left: 160px;
-}
+    left:160px ;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    
+
 
 .body-temperature {
     color: #596373;
