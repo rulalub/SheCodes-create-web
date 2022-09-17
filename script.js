@@ -1,13 +1,3 @@
-function search(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#current-city-input");
-
-  let entercity = document.querySelector("#currentCity");
-  entercity.innerHTML = cityInput.value;
-}
-let form = document.querySelector("#current-city");
-form.addEventListener("submit", search);
-
 function formatDate(date) {
   let hours = date.getHours();
   if (hours < 10) {
@@ -50,8 +40,8 @@ function showPosition(position) {
 }
 
 function showTemperature(response) {
-  document.querySelector("#currentCity").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
+  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#nowTemperature").innerHTML = Math.round(
     response.data.main.temp
   );
 }
@@ -65,6 +55,7 @@ function searchCity(city) {
 function Submit(event) {
   event.preventDefault();
   let city = document.querySelector("#current-city-input").value;
+  console.log(city);
   searchCity(city);
 }
 function searchLocation(position) {
@@ -82,5 +73,4 @@ let searchForm = document.querySelector("#current-city");
 searchForm.addEventListener("submit", Submit);
 
 let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", getCurrentLocation)
-
+currentLocationButton.addEventListener("click", getCurrentLocation);
